@@ -69,6 +69,10 @@ header .container {
     height: fit-content;
 }
 
+header .container img {
+    display: none;
+}
+
 header .container button {
     margin-top: 40px;
 }
@@ -98,7 +102,10 @@ nav ul a {
     font: 24px;
     color: var(--yellow);
     text-decoration: none;
+}
 
+nav ul a svg {
+    display: none;
 }
 
 section {
@@ -108,22 +115,62 @@ section {
 
 /*  Responsividade   */
 
+@media (max-width: 1000px) {
+    header .container {
+        width: 100%;
+    }
+
+    nav ul a {
+        font-size: 18px;
+    }
+
+    nav {
+        padding: 0 30px;
+    }
+}
 
 /*  tablet  */
 @media (max-width: 767px) {
-    header .container {
-        background: red;
-        width: 100%;
+
+    header .container img {
+        display: inline;
+        margin-bottom: 70px;
+    }
+
+    nav {
+        padding: 0 30px;
     }
 
     nav img {
         display: none;
     }
+
+    nav ul {
+        padding: 0;
+    }
+
+    nav ul a {
+        font-size: 16px;
+    }
 }
 
 /*  celular  */
-@media (min-width: 480px) {
-    header .contaier {
-        background: green;
+@media (max-width: 480px) {
+    header .container {
+        padding: 0 40px
+    }
+
+    nav {
+        padding: 0 15px;
+    }
+
+    nav ul a {
+        font-size: 12px;
+
+    }
+
+    nav ul a svg {
+        display: block;
+        margin: 0 auto 10px;
     }
 }
